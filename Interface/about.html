@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poultry Disease Information</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #f0fff5, #ffffff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #00cc66, #00e699);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: white;
+    }
+
+    .home-btn {
+      background: white;
+      color: #00b359;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .home-btn:hover {
+      background: #f0fff5;
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .intro {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      text-align: justify;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      background: linear-gradient(to right, #00b359, #00e699);
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 22px;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Poultry Disease Information</h1>
+    <a href="/" class="home-btn">Home</a>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      Poultry birds, especially chickens, are often affected by infectious diseases that can spread quickly and cause serious problems if not treated early. 
+      <strong>Fowl Pox</strong> is a viral disease that causes wart-like sores or scabs on the comb, beak, and face of the bird. It usually spreads through mosquitoes or direct contact and can be prevented with vaccines. 
+      <strong>Newcastle Disease</strong> is another viral infection that causes symptoms like twisted necks, breathing problems, and paralysis. It spreads through the air or contaminated feed, and although there's no cure, vaccines can help control it. 
+      <strong>Avian Influenza</strong>, also known as bird flu, is a highly contagious virus that causes swelling, bluish combs, and severe illness. It spreads rapidly and can cause high death rates in poultry farms. 
+      Detecting these diseases early using image-based AI tools can help farmers take quick action and reduce bird loss.
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Fowl Pox</h2>
+        <p>
+          Fowl Pox is a viral disease that forms wart-like lesions or scabs on the bird’s comb, beak, and eyelids. It spreads through mosquito bites or direct contact with infected birds. While there is no specific treatment, the disease can be prevented through vaccination.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Newcastle Disease</h2>
+        <p>
+          Newcastle Disease is a dangerous viral infection causing symptoms like twisted necks, paralysis, respiratory issues, and reduced egg production. It spreads through air or contaminated feed. Vaccination is essential, as there's no cure for this disease.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Avian Influenza</h2>
+        <p>
+          Also known as bird flu, Avian Influenza is a contagious virus causing swelling, diarrhea, and a bluish comb. It spreads very fast and can wipe out entire flocks if not detected early. Strict biosecurity and early diagnosis are key to control.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Poultry Disease Classifier Project. All rights reserved.
+  </footer>
+
+</body>
+</html>
