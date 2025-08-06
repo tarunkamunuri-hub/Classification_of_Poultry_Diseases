@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prediction Result | PoultryDetect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #333;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .navbar {
+      background: #00695c;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: #ffee58;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #00796b;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .result {
+      font-size: 1.5rem;
+      color: #d84315;
+      font-weight: bold;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .image-preview {
+      margin-top: 20px;
+    }
+
+    .image-preview img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+      animation: scaleUp 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scaleUp {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div><strong>PoultryDetect</strong></div>
+    <div>
+      <a href="/">HOME</a>
+      <a href="/about.html">ABOUT</a>
+      <a href="/team_info.html">TEAM</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Prediction Result</h1>
+
+    {% if predict %}
+      <div class="result">Diagnosis: {{ predict }}</div>
+    {% endif %}
+
+    {% if image_path %}
+      <div class="image-preview">
+        <img src="{{ image_path }}" alt="Uploaded Image" />
+      </div>
+    {% endif %}
+  </div>
+
+</body>
+</html>
